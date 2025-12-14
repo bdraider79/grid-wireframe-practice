@@ -44,31 +44,19 @@
 }
 @media (min-width: 768px) {
   .page {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 240px 1fr 240px;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-      "header header"
-      "aside  main"
-      "footer footer";
+      "header header header"
+      "aside-left main aside-right"
+      "footer footer footer";
+    gap: 12px;
   }
 
-  .header {
-    grid-area: header;
-  }
-
-  .aside {
-    grid-area: aside;
-  }
-
-  .main {
-    grid-area: main;
-    grid-template-rows: repeat(3, auto);
-  }
-
-  .footer {
-    grid-area: footer;
-  }
-}
+  .header { grid-area: header; }
+  .main   { grid-area: main; }
+  .footer { grid-area: footer; }
