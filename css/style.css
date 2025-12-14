@@ -63,14 +63,16 @@
   .top-aside    { grid-area: asideL; }
   .bottom-aside { grid-area: asideR; }
 
-  /* Main area: 3 columns side-by-side */
+  /* ARTICLE area */
   .main {
     display: grid;
+    grid-template-rows: 1fr auto;   /* top space + columns row */
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    align-content: center;
+    align-items: end;
   }
 
+  /* Columns sit on the bottom row */
   .column {
     min-height: 70px;
   }
