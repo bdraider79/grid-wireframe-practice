@@ -52,29 +52,25 @@
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
       "header header header"
-      "aside-left main aside-right"
+      "asideL main  asideR"
       "footer footer footer";
-    gap: 12px;
   }
 
   .header { grid-area: header; }
   .main   { grid-area: main; }
   .footer { grid-area: footer; }
 
+  .top-aside    { grid-area: asideL; }
+  .bottom-aside { grid-area: asideR; }
 
-  .aside-left  { grid-area: aside-left; }
-  .aside-right { grid-area: aside-right; }
-
-
+  /* Main area: 3 columns side-by-side */
   .main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr; 
     gap: 12px;
-    align-items: end;
+    align-content: center;
   }
 
-  
   .column {
     min-height: 70px;
   }
