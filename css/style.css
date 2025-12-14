@@ -60,3 +60,22 @@
   .header { grid-area: header; }
   .main   { grid-area: main; }
   .footer { grid-area: footer; }
+
+
+  .aside-left  { grid-area: aside-left; }
+  .aside-right { grid-area: aside-right; }
+
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr; 
+    gap: 12px;
+    align-items: end;
+  }
+
+  
+  .column {
+    min-height: 70px;
+  }
+}
